@@ -132,8 +132,8 @@ cc_library_headers {
         ":lib-1",
         ":lib-2",
     ]`,
-        "sdk_version": `"current"`,
-        "min_sdk_version": `"29"`,
+				"sdk_version":     `"current"`,
+				"min_sdk_version": `"29"`,
 			}),
 		},
 	})

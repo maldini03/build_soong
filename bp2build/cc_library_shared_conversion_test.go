@@ -176,8 +176,8 @@ cc_library_shared {
         ":whole_static_lib_1",
         ":whole_static_lib_2",
     ]`,
-        "sdk_version": `"current"`,
-        "min_sdk_version": `"29"`,
+				"sdk_version":     `"current"`,
+				"min_sdk_version": `"29"`,
 			}),
 		},
 	})

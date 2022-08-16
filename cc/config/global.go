@@ -258,7 +258,7 @@ var (
 		"-Wno-error=unused-private-field",
 		"-Wno-unused-command-line-argument",
 		"-Wno-unqualified-std-cast-call",
-                // Clang-16 r470170
+		// Clang-16 r470170
 		"-Wno-array-parameter",
 		"-Wno-deprecated",
 		"-Wno-deprecated-builtins",

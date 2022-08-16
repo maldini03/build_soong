@@ -2181,14 +2181,14 @@ func RewriteSnapshotLib(lib string, snapshotMap map[string]string) string {
 // RewriteLibs takes a list of names of shared libraries and scans it for three types
 // of names:
 //
-// 1. Name of an NDK library that refers to a prebuilt module.
-//    For each of these, it adds the name of the prebuilt module (which will be in
-//    prebuilts/ndk) to the list of nonvariant libs.
-// 2. Name of an NDK library that refers to an ndk_library module.
-//    For each of these, it adds the name of the ndk_library module to the list of
-//    variant libs.
-// 3. Anything else (so anything that isn't an NDK library).
-//    It adds these to the nonvariantLibs list.
+//  1. Name of an NDK library that refers to a prebuilt module.
+//     For each of these, it adds the name of the prebuilt module (which will be in
+//     prebuilts/ndk) to the list of nonvariant libs.
+//  2. Name of an NDK library that refers to an ndk_library module.
+//     For each of these, it adds the name of the ndk_library module to the list of
+//     variant libs.
+//  3. Anything else (so anything that isn't an NDK library).
+//     It adds these to the nonvariantLibs list.
 //
 // The caller can then know to add the variantLibs dependencies differently from the
 // nonvariantLibs
@@ -3604,9 +3604,7 @@ func (c *Module) ConvertWithBp2build(ctx android.TopDownMutatorContext) {
 	}
 }
 
-//
 // Defaults
-//
 type Defaults struct {
 	android.ModuleBase
 	android.DefaultsModuleBase

@@ -728,7 +728,8 @@ func (c *config) DeviceName() string {
 // these per device type.
 //
 // NOTE: Do not base conditional logic on this value. It may break product
-//       inheritance.
+//
+//	inheritance.
 func (c *config) DeviceProduct() string {
 	return *c.productVariables.DeviceProduct
 }
@@ -1718,7 +1719,6 @@ func (c *config) ForceMultilibFirstOnDevice() bool {
 //   - "com.android.art:core-oj"
 //   - "platform:framework"
 //   - "system_ext:foo"
-//
 type ConfiguredJarList struct {
 	// A list of apex components, which can be an apex name,
 	// or special names like "platform" or "system_ext".

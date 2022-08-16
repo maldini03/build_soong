@@ -114,7 +114,7 @@ func inList(s string, list []string) bool {
 
 // Main execution of soong_ui. The command format is as follows:
 //
-//    soong_ui <command> [<arg 1> <arg 2> ... <arg n>]
+//	soong_ui <command> [<arg 1> <arg 2> ... <arg n>]
 //
 // Command is the type of soong_ui execution. Only one type of
 // execution is specified. The args are specific to the command.
