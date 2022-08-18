@@ -165,6 +165,11 @@ func (tidy *tidyFeature) flags(ctx ModuleContext, flags Flags) Flags {
 	// http://b/216364337 - TODO: Follow-up after compiler update to
 	// disable or fix individual instances.
 	tidyChecks = tidyChecks + ",-cert-err33-c"
+	// clang16
+	tidyChecks = tidyChecks + ",-bugprone-assignment-in-if-condition"
+	tidyChecks = tidyChecks + ",-bugprone-forwarding-reference-overload"
+	tidyChecks = tidyChecks + ",-bugprone-unchecked-optional-access"
+	tidyChecks = tidyChecks + ",-misc-const-correctness"
 	flags.TidyFlags = append(flags.TidyFlags, tidyChecks)
 
 	if ctx.Config().IsEnvTrue("WITH_TIDY") {
