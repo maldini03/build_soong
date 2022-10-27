@@ -72,9 +72,6 @@ var (
 		// Help catch common 32/64-bit errors.
 		"-Werror=int-conversion",
 
-		// Enable the new pass manager.
-		"-fexperimental-new-pass-manager",
-
 		// Disable overly aggressive warning for macros defined with a leading underscore
 		// This happens in AndroidConfig.h, which is included nearly everywhere.
 		// TODO: can we remove this now?
@@ -86,9 +83,6 @@ var (
 
 		// Warnings from clang-7.0
 		"-Wno-sign-compare",
-
-		// Warnings from clang-8.0
-		"-Wno-defaulted-function-deleted",
 
 		// Disable -Winconsistent-missing-override until we can clean up the existing
 		// codebase for it.
@@ -201,7 +195,6 @@ var (
 		"-Werror=int-in-bool-context",
 		"-Werror=int-to-pointer-cast",
 		"-Werror=pointer-to-int-cast",
-		"-Werror=string-compare",
 		"-Werror=xor-used-as-pow",
 		// http://b/161386391 for -Wno-void-pointer-to-enum-cast
 		"-Wno-void-pointer-to-enum-cast",
@@ -263,9 +256,15 @@ var (
 		"-Wno-array-parameter",
 		"-Wno-deprecated",
 		"-Wno-deprecated-builtins",
+		"-Wno-deprecated-declarations",
 		"-Wno-deprecated-non-prototype",
 		"-Wno-unused-but-set-parameter",
 		"-Wno-unused-but-set-variable",
+		// Clang-16 r480375
+		"-Wno-error=thread-safety-analysis",
+		"-Wno-defaulted-function-deleted",
+		"-Wno-single-bit-bitfield-constant-conversion",
+		"-Wno-thread-safety-analysis",
 	}
 
 	noOverrideExternalGlobalCflags = []string{
