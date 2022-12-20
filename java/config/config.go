@@ -94,7 +94,7 @@ func init() {
 		"-JXX:TieredStopAtLevel=1",
 	}, dexerJavaVmFlagsList...))
 	exportedVars.ExportStringListStaticVariable("R8Flags", append([]string{
-		"-JXmx2048M",
+		"-JXmx4096M",
 		// Disable this optimization as it can impact weak reference semantics. See b/233432839.
 		"-JDcom.android.tools.r8.disableEnqueuerDeferredTracing=true",
 	}, dexerJavaVmFlagsList...))
